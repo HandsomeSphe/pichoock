@@ -1,0 +1,210 @@
+
+
+////////////////____***** HEADER*****____///////
+.container{
+    background-color:var(--color-tertairy-color-1);
+    box-shadow:var(--box-shadow-1);
+    max-width:119rem;
+    margin:3.5rem auto;
+
+    min-height: 50rem;
+
+    @media(max-width:$bp--xxlarge){
+        margin:0;
+   }
+
+
+}
+
+.header{
+    background-color:var(--color-tertairy-color-1);
+    border-bottom:.01rem solid var( --color-tertairy-color-3);
+    height:7rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    align-items:center;
+
+    @media only screen and (max-width:$bp--large){
+        flex-wrap:wrap;
+    }
+
+}
+
+////////////////____***** SIDE NAVIGATION*****____///////
+.content{
+    display:flex;
+
+    
+    @media(max-width:$bp--xlarge){
+        flex-direction:column;
+   }
+}
+.leftnav{
+    background-color:lightgray;
+     
+     flex:0 0 18%;
+     //height:100vh;
+
+     display:flex;
+     flex-direction:column;
+     justify-content:space-between;
+
+     
+
+     &__nav{
+        font-size:1.4rem;
+        list-style-type:none;
+        margin-top:1.3rem;
+
+        @media(max-width:$bp--xlarge){
+            display:flex;
+            margin:0;
+
+       }
+
+     }
+     &__nav--items{
+         position:relative;
+
+         @media(max-width:$bp--xlarge){
+            flex:1;
+            margin:0;
+           
+              
+       }
+
+         &:not(:last-child){
+            margin-bottom:1rem;
+         }
+         
+     }
+     &__nav--items::before{
+          content:"";
+          position:absolute;
+          top:0;
+          left:0;
+          
+
+          height:100%;
+          background-color:var(--color-primary-color-1);
+          width:.3rem;
+          transform-origin:top;
+          transform:scaleY(0);
+          transition: transform .6s,
+               width .5s .7s;
+
+           
+
+          
+     }
+     &__nav--items:hover::before,
+     &__nav--items--active::before{
+             transform:scaleY(1);
+             width:100%;
+
+             @media(max-width:$bp--xlarge){
+              width:0;
+              transform:scaleY(0);
+           }       
+     }
+
+     &__nav--items--active{
+         @media(max-width:$bp--xlarge){
+             width:100%;
+         }
+     }
+    
+     &__nav--link:link,
+     &__nav--link:visited{
+        text-decoration:none;
+        color:black;
+        text-transform:uppercase;
+        font-weight:400;
+        display:inline-block;
+        padding:.5rem 1.8rem;
+        z-index:3;
+        position:relative;
+
+       
+    
+         display:flex;
+         align-items:center;
+
+         @media(max-width:$bp--xlarge){
+            justify-content:center;
+            padding:1.4rem;
+       }
+} 
+    
+     &__nav--icon{
+      
+
+            width:1.75rem;
+            height:1.75rem;
+            margin-right:2rem;
+            fill:var(--color-tertairy-color2-3);
+
+     }
+}
+.creater{
+    font-size:1.4rem;
+    font-weight:100;
+    color:grey;
+    text-align:center;
+
+    @media(max-width:$bp--xxlarge){
+        display:none;
+   }
+}
+
+.hotels{
+     flex:1;
+     
+}
+
+////////////////____***** DETAILS*****____///////
+
+
+.details{
+
+    display:flex;
+    padding:3rem;
+    background-color:var(--color-tertairy-color-2);
+
+    @media only screen and (max-width:$bp--xxlarge){
+        padding:3rem;
+    }
+
+    @media only screen and (max-width:$bp--xxlarge){
+        flex-direction:column;
+    }
+
+}
+.description{
+
+    flex:0 0 60%;
+    margin-right:3rem;
+    box-shadow:var(--box-shadow-1);
+    padding:3rem;
+    font-size:1.4rem;
+
+    
+    @media only screen and (max-width:$bp--xxlarge){
+        padding:2rem;
+        margin:2rem;
+    }
+
+    @media only screen and (max-width:$bp--large){
+        margin-right:0;
+        margin-bottom:2rem;
+
+    }
+
+}
+.user__reviews{
+
+    flex:1;
+
+}

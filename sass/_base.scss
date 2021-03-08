@@ -1,0 +1,97 @@
+/////****_____CSS VARIABLES_____*****/////////
+
+/******* COLORS**********/
+:root{
+    --color-primary-color-1:#aaaa55;
+    --color-primary-color-2: #666633;
+    --color-primary-color-3:#222211;
+    
+    
+    --color-secondary-color-1:#999966;
+    --color-secondary-color-2:#b8b894;
+    --color-secondary-color-3:#996633;
+
+    --color-tertairy-color-1:#fff;
+    --color-tertairy-color-2:#faf9f9;
+    --color-tertairy-color-3:#f4f2f2;
+    --color-tertairy-color-4:#f0eeee;
+    --color-tertairy-color-5:#ccc;
+
+    /********dark colors*************/
+    --color-tertairy-color2-3:#999;
+    --color-tertairy-color2-3:#333;
+    --color-tertairy-color2-3:#777;
+
+     /********dark colors*************/
+
+     --box-shadow-1:.1rem .2rem 1rem rgba(0,0,0,.3);
+
+}
+
+
+/////****_____GLOBAL RESET_____*****/////////
+
+
+*{
+    margin:0;
+    padding:0;
+}
+*,
+*::before,
+*::after{
+    box-sizing:inherit;
+}
+
+html{
+    box-sizing:border-box;
+    font-size:62.5%;           /// this simply means that 10px = 1rem ///
+
+    @media only screen and (max-width:64em){
+        font-size:50%;
+    }
+    @media only screen and (max-width:48em){
+        font-size:40%;
+    }
+    @media only screen and (max-width:26.56em){
+        font-size:40%;
+    }
+    @media only screen and (max-width:23.44em){
+        font-size:35%;
+    }
+    
+}
+
+/* font-family: 'Baloo Chettan 2', cursive; */
+
+body{
+     //background-color:#aaaa55;
+     font-family: 'Baloo Chettan 2', cursive;
+     font-weight:400;
+     line-height:1.9;
+     -webkit-background-image:linear-gradient(to right bottom, var( --color-primary-color-1), var(--color-primary-color-3));
+     background-image:linear-gradient(to right bottom, var( --color-primary-color-1), var(--color-primary-color-3));
+     background-size:cover;
+     background-repeat:no-repeat;
+
+     min-height:100vh;
+}
+
+/////////////////////////////////// BREAKPOINTS ///////////////////////////////
+
+$bp--xxlarge:64em;
+$bp--xlarge:48em;
+$bp--large:26.56em;
+$bp--medium:23.44em;
+$bp--small:20em;
+
+    /////// NEW BREAKPOINTS //////
+/* 
+mobile :20em;           ///320px
+mobile M :23.44em;      /// 375px
+mobile L :26.56em;      ///425px
+Tablet : 48em;           ////768px
+laptop : 64em;        ///1024px
+laptop L :90em;      /////1440px
+4K :160em;         //////2560px
+
+*/

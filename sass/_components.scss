@@ -1,0 +1,369 @@
+//////////////////////////////////----LOGO------//////////////////////////////
+
+.logo{
+     height:4.9rem;
+     width:4.9rem;
+     margin-left:1rem;
+
+     @media(max-width:$bp--xxlarge){
+           height:4rem;
+           width:4rem;
+     }
+}
+
+//////////////////////////////////----SEARCH------//////////////////////////////
+.search{
+     // background-color:rgb(160, 66, 80);
+      flex:0 0 40%;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      @media only screen and (max-width:$bp--xlarge){
+          order:1;
+      }
+ &__input{
+     font-family:inherit;
+     font-size:inherit;
+     font-weight:300;
+     color:inherit;
+     border:none;
+     background-color:var(--color-tertairy-color-2);
+     padding:.5rem .5rem;
+     border-radius:1rem;
+     width:85%;
+     transition: all .5s;
+
+
+       
+
+
+     &:focus{
+          width:100%;
+          outline:none;
+          background-color:var(--color-tertairy-color-4);
+     }
+
+}
+
+&__input:focus + &__button{
+     background-color:var(--color-tertairy-color-4);
+}
+
+
+&__button{
+     background-color:var(--color-tertairy-color-2);
+     border:none;
+     align-items:center;
+     margin-left:-4rem;
+
+     &:focus{
+         outline:none;
+     }
+     &:active{
+          background-color:var(--color-tertairy-color-4);
+     
+     }
+}
+&__icon{
+     width:3rem;
+     height:3vh;
+     fill:var(--color-tertairy-color2-3);
+}
+}
+//////////////////////////////////----USER NAVIGATION------//////////////////////////////
+
+.user-nav{
+     align-self: stretch;
+     display:flex;
+     align-items:center;
+     justify-content: center;
+
+
+& > *{
+   display:flex;
+   align-self:stretch;
+   padding:1rem;
+   height:100%; 
+   
+   align-items:center;
+}
+
+& > *:hover{
+    background-color:var(--color-tertairy-color-4);
+}
+
+&__icon-box{
+   
+    position:relative;
+}
+&__icon{
+    height:2.25rem;
+    width:2.25rem;
+}
+&__notification{
+     width:1.95rem;
+     height:1.95rem;
+     font-size:.7rem;
+     color:#fff;
+     background-color:rgba(128, 0, 0,.5);
+      padding:.99rem;
+     border-radius:50%;
+     position:absolute;
+     top:9%;
+     left:47%;
+
+     display:flex;
+     align-items:center;
+     justify-content:center;
+}
+&__user--photo{
+       width:3rem;
+       height:3rem;
+       border-radius:50%;
+
+       margin-right:.8rem;
+}
+&__user-name{
+     font-size:inherit;
+     font-weight:400;
+}
+}
+//////////////////////////////////----GALLERY------//////////////////////////////
+
+.gallery{
+     display:flex;
+
+     &__items{
+          flex:1;
+     }
+     
+     &__photo{
+          width:100%;
+          display:block;     
+     }
+
+}
+
+//////////////////////////////////----HOTEL OVERVIEW------//////////////////////////////
+
+
+.overview{
+ 
+     display:flex;
+     align-items:center;
+     border:1px solid var(--color-tertairy-color-4);
+
+     &__heading{
+         font-size:2.6rem;
+         font-weight:100;
+         margin:0 1.9rem;
+         @media only screen and (max-width:$bp--xxlarge){
+            font-size:2rem;
+      }
+
+         @media only screen and (max-width:$bp--large){
+            font-size:.8rem;
+      }
+      
+         @media only screen and (max-width:$bp--medium){
+        
+            font-size:.5rem;
+            margin:0;
+            flex-wrap:wrap;
+      }
+         @media only screen and (max-width:$bp--small){
+              font-size:.4rem;
+      }
+
+     }
+     &__stars{
+
+      margin-right:auto;
+      display:flex;
+     }
+
+
+     &__icon--star,
+     &__location--icon{
+           width:1.5rem;
+           height:1.5rem;
+           fill:var(--color-primary-color-1);
+
+     }
+
+     
+     &__rating{
+     
+          margin-left:1rem;
+          background-color:var(--color-primary-color-1);
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          padding:0 1.3rem;
+          align-self:stretch;
+
+          @media only screen and (max-width:$bp--large){
+               margin:0;
+               padding:0 1rem;
+           }
+     }
+     &__rating--average{
+           font-size:1.5rem;
+           font-weight:300;
+
+           @media only screen and (max-width:$bp--large){
+               font-size:1rem;
+           }
+     }
+}    
+
+//////////////////////////////////----BUTTON INLINE------//////////////////////////////
+
+.button__inline{
+     margin:1.3rem 1.7rem;
+     padding:.5rem .4rem;
+     border:none;
+     background-color:transparent;
+     border-bottom:1px solid var(--color-primary-color-1);
+     font-size:1.5rem;
+     font-weight:300;
+     cursor:pointer;
+}
+.button__inline:focus,
+.button__inline:active{
+     outline:none;
+     border-bottom:1.5px solid maroon;
+}
+
+.button__inline:hover{
+     border-bottom:1.5px solid maroon;
+     color:currentColor;
+}
+//////////////////////////////////---- PARAGRAPH------//////////////////////////////
+.paragraph{
+     font-size:1.2rem;;
+}
+.paragraph:not(:last-of-type){
+      margin-bottom:2rem;
+}
+
+//////////////////////////////////---- LIST------//////////////////////////////
+
+
+.list{
+     list-style-type:none;
+     margin:3rem 0;
+     border-bottom:1px solid var(--color-tertairy-color-4);
+     border-top:1px solid var(--color-tertairy-color-4);
+     padding:3rem 0;
+
+     display:flex;
+     flex-wrap:wrap;
+
+     &__items{
+          flex:0 0 50%;
+          margin-bottom:.6rem;
+          font-size:1.3rem;
+     }
+     &__items::before{
+          content:"";
+          display:inline-block;
+          width:2rem;
+          height:2rem;
+           // background-image:url(../images/link.svg);
+
+          /// new way of coloouring svg icons
+               background-color:var( --color-primary-color-2);
+               -webkit-mask:url(../images/link.svg);
+               mask:url(../images/link.svg);
+               -webkit-mask-size:cover;
+               mask-size:cover;
+
+     }
+}
+
+//////////////////////////////////---- RECOMMEND------//////////////////////////////
+
+
+.recommend{
+
+     font-size:1.3rem;
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+
+     &__customer{
+          margin-right:auto;
+ 
+     }
+     &__friends{
+
+      display:flex;
+
+     }
+     &__photo{
+      box-sizing:content-box;
+       width:4.5rem;
+       height:4.5rem;
+       border-radius:50%;
+       border:1.9px solid var(--color-tertairy-color-1);
+  
+     
+     }
+     &__photo:not(:first-child){
+          margin-left:-1.4rem;
+     }
+
+}
+
+//////////////////////////////////---- REVIEW  USER------//////////////////////////////
+
+
+
+.review{
+     background-color:var(--color-tertairy-color-1);
+     box-shadow:var( --box-shadow-1);
+     padding:3rem;
+     margin-bottom:2.5rem;
+     font-size:1.4rem;
+
+     
+    @media only screen and (max-width:$bp--xxlarge){
+     padding:2rem;
+     margin:1.5rem;
+
+ }
+
+     &__user{
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          margin-top:2rem;
+
+     }
+     &__photo{
+          width: 7rem;
+          height:7rem;
+          border-radius:50%;
+          margin-right:1rem;
+     }
+     &__user--box{
+           margin-right:auto;
+           align-items:center;
+           justify-content:center;
+     }
+     &__user--name{
+            text-transform:uppercase;
+            font-weight:700;
+     }
+
+     &__rating{
+            font-size:1.9rem;
+            color:var(--color-primary-color-1);
+     }
+}
+
+
+//////////////////////////////////----CALL TO ACTION BUTTON------//////////////////////////////
